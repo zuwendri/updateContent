@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root {
+  --font-size: 16px;
+  --bg: url(../Picture/Picss.jpg);
+  --bg-animation-css: #82FFFF;
+  --bg-main: cyan;
+  --txt: orange;
+  --bg-navBar: orange;
+}
+
+* {
+  transition: .5s ease-out;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vmax;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Russo One', sans-serif;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  animation: bgOo 2s ease forwards alternate infinite;
+}
+
+
+/* NAVIGATION CODE */
+nav {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid transparent;
+  width: 100%;
+  padding: 0 5%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 999;
+  position: fixed;
+  align-items: center;
+  box-shadow: 2px 2px 2vw 1vw #000;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  border: .7vw solid rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(20vw);
+}
+
+nav i {
+
+  font-size: 6vw;
+  color: white;
+  z-index: 94648454404454;
+  left: 0;
+  transform: translateX(200%);
+  animation: opacity .5s ease forwards;
+  transition: ease-out .1s;
+}
+
+nav h2 {
+  font-size: clamp(10px, 4vw, 30px);
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(45deg, gray, white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2px;
+  position: fixed;
+  border-left: .2vw solid green;
+  right: 0;
+  top: -20px;
+  height: 100%;
+  overflow: hidden;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  border-radius: 1vw;
+  padding: 0vw 10px;
+  border: none;
+  background-color: none;
+  box-sizing: border-box;
+}
+
+nav ul li:hover {
+  border: .1vw solid #fff;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+nav ul li a {
+  font-size: clamp(10px, 3vw, 20px);
+  text-decoration: none;
+  margin: .5rem;
+  opacity: .5;
+  font-weight: bold;
+  color: ghostwhite;
+}
+
+a:hover,
+:active,
+:focus {
+  opacity: 1;
+  color: orange;
+}
+
+nav ul li:nth-child(n+1) {
+  flex-grow: 0;
+  align-self: flex-end;
+}
+
+/* NAVIGATION END CODE */
+
+
+/* MAIN CONTENT START */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  border-radius: 1vw;
+  border: 0px solid green;
+  margin: 20% 10%;
+  color: var(--txt);
+  background-color: var(--bg-main);
+  background: inherit;
+  opacity: 0;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  border: .7vw solid rgb(255, 255, 255);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(1vw);
+}
+
+main h1 {
+  font-size: clamp(2px, 10vw, 50px);
+  padding-left: 0.5rem;
+  margin: .5rem 0vw;
+  transform: translateX(5px);
+  position: relative;
+  background: hsla(19, 67%, 55%, 1);
+  background: linear-gradient(45deg, hsla(19, 67%, 55%, 1) 0%, hsla(49, 83%, 49%, 1) 49%, hsla(12, 89%, 52%, 1) 100%);
+
+  background: -moz-linear-gradient(45deg, hsla(19, 67%, 55%, 1) 0%, hsla(49, 83%, 49%, 1) 49%, hsla(12, 89%, 52%, 1) 100%);
+
+  background: -webkit-linear-gradient(45deg, hsla(19, 67%, 55%, 1) 0%, hsla(49, 83%, 49%, 1) 49%, hsla(12, 89%, 52%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#D96E3D", endColorstr="#E6C016", GradientType=1);
+  /*text-shadow: 1vw 2vw 2vw #000;*/
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+main p {
+  font-size: clamp(.5rem, 1vmax, 1rem);
+}
+
+.lorem {
+  position: relative;
+  background: orange;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+main div div {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border: 0px solid #000 transparent;
+  border-radius: 15%;
+  width: clamp(2rem, 25%, 10rem);
+  height: clamp(50px, 25vw, 200px);
+  float: left;
+  margin-right: auto;
+  background: hsla(234, 100%, 50%, 1);
+
+  background: linear-gradient(45deg, hsla(234, 100%, 50%, 1) 0%, hsla(0, 0%, 0%, 1) 49%, hsla(0, 100%, 50%, 1) 100%);
+
+  background: -moz-linear-gradient(45deg, hsla(234, 100%, 50%, 1) 0%, hsla(0, 0%, 0%, 1) 49%, hsla(0, 100%, 50%, 1) 100%);
+
+  background: -webkit-linear-gradient(45deg, hsla(234, 100%, 50%, 1) 0%, hsla(0, 0%, 0%, 1) 49%, hsla(0, 100%, 50%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0019FF", endColorstr="#000000", GradientType=1);
+}
+
+.pics {
+  filter: brightness(120%);
+  filter: contrast(120%);
+  filter: drop-shadow(0px 2px 4px #000);
+  transform: scale(1);
+}
+
+.pics:hover {
+  transform: scale(1.1);
+}
+
+
+main div div span {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border: 0px solid #000;
+  overflow-y: visible;
+  width: 100%;
+  transform: translateY(-0px);
+  overflow-y: Hidden;
+  height: inherit;
+}
+
+
+
+.title1 {
+  font-size: clamp(1px, 3vw, 30px);
+  margin: 2.5px 0vw;
+  transform: translateX(10px);
+  position: relative;
+  background: hsla(19, 67%, 55%, 1);
+
+  background: linear-gradient(45deg, hsla(19, 67%, 55%, 1) 0%, hsla(49, 83%, 49%, 1) 49%, hsla(12, 89%, 52%, 1) 100%);
+
+  background: -moz-linear-gradient(45deg, hsla(19, 67%, 55%, 1) 0%, hsla(49, 83%, 49%, 1) 49%, hsla(12, 89%, 52%, 1) 100%);
+
+  background: -webkit-linear-gradient(45deg, hsla(19, 67%, 55%, 1) 0%, hsla(49, 83%, 49%, 1) 49%, hsla(12, 89%, 52%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#D96E3D", endColorstr="#E6C016", GradientType=1);
+  /*text-shadow: 1vw 2vw 2vw #000;*/
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* MAIN CONTENT END */
+
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-text {
+  font-size: 4vw;
+  color: cyan;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid lightblue;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,8 +1,10 @@
- console.log("Hello World")
+//MAIN SCRIPT//
+
+console.log("Hello World")
 const loadingElement = document.querySelector('.loading');
 const textElement = document.querySelector('.lorem');
 const opacityElement = document.querySelector('main')
-const opacityElement2 = document.querySelector('nav')
+//const opacityElement2 = document.querySelector('nav')
 const opacityElement3 = document.querySelector('body')
 const text = textElement.textContent;
 let index = 0;
@@ -13,14 +15,14 @@ function writer() {
 
   if (index < text.length) {
     index++;
-    setTimeout(writer, 1); /* delay typing (millisecond)*/
+    setTimeout(writer, 1); /* delay typing */
   }
 }
 setTimeout(() => {
   writer();
   loadingElement.style.display = 'none';
   opacityElement.style.opacity = '1'
-  opacityElement2.style.opacity = '1'
+  //  opacityElement2.style.opacity = '1'
   opacityElement3.style.backgroundImage = 'var(--bg)'
 }, 3000); // delay before start code
 console.log('Hello, how are you!? My name is Irwan Zuwendri Z. Hope you enjoy with my content.\nThank you for visited  my Portfolio.')
@@ -28,29 +30,83 @@ console.log('Hello, how are you!? My name is Irwan Zuwendri Z. Hope you enjoy wi
 
 
 
-//Navbar
-let i = document.getElementById('rtd');
+//NAVBAR SCRIPT//
+
+let i = document.getElementById('hvr')
+let l = document.getElementById('mrp')
+let j = document.getElementById('ul')
+
+i.style.transform = 'rotate(0deg) translateX(0rem)'
+if (i.style.transform === 'rotate(0deg) translateX(0rem)') {
+  i.addEventListener('click', function() {
+    i.style.display = 'none'
+    j.style.transform = 'translateX(0rem)'
+    if(j.style.transform === 'translateX(0rem)'){
+      l.addEventListener('click', function(){
+        j.style.transform = 'translateX(30rem)'
+        i.style.display ='block'
+      })
+    }
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*
-
-//BETULKAN KODENYA||UPDATE THE CODE MAN//
-const i = document.getElementById('rtd');
-let rotation = 0;
-let translate = 200;
-
 i.addEventListener('click', function() {
-  if (rotation === 0) {
-    rotation = 180;
-    translate = -360;
-  } else {
-    rotation = 0;
-    translate = 350;
+  i.style.transform = 'rotate(180deg) translateX(0rem)'
+  setTimeout(function() {
+    i.style.transform = 'rotate(180deg) translateX(3rem)'
+       j.style.transform = 'translateX(0vw)'
+  }, 100), setTimeout(function() {
+    i.style.display = 'none'
+    l.style.display = 'block'
+  }, 150)
+})
+l.addEventListener('click', function() {
+  if(l.style.display === 'block'){
+     j.style.transform = 'translateX(30vw)'
+     l.style.transform = 'rotate(180deg) translate(-3rem)'
+    setTimeout(function(){
+      l.style.display = 'none'
+      l.style.transform = 'rotate(180deg) translate(-3rem)'
+    },200)
   }
+     i.style.display = 'block'
   
-  i.style.transform = `rotate(${rotation}deg) translateX(${rotation}px)`;
-});
-*/
-
-
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+/*  l.style.transform = 'rotate(180deg) translateX(0rem)'
+  setTimeout(function() {
+    l.style.transform = 'rotate(180deg) translateX(-2rem)'
+        j.style.transform = 'translateX(0vw)'
+  }, 100), setTimeout(function() {
+    l.style.display = 'none'
+    i.style.display = 'block'
+  }, 200), setTimeout(function() {
+    i.style.transform = 'rotate(0deg)'
+    l.style.transform = 'rotate(180deg) translateX(0rem)'
+     j.style.transform = 'translateX(30vw)'
+  }, 200)
+})*/

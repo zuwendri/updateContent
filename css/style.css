@@ -77,17 +77,16 @@ nav::before {
   position: absolute;
   font-size: clamp(10px, 6vw, 50px);
   color: white;
-  border: 0px solid #000;
+  border: 1px solid #fff;
   padding: 0 5%;
   left: 0;
   top: 4.5vw;
-  opacity: .5;
+  opacity: 1;
   z-index: 94648454404454;
   animation: opacity .5s ease forwards;
   transition: ease-out .1s;
 }
 #mrp:hover{
-  opacity: 1;
   color: orange;
 }
 
@@ -118,13 +117,14 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  border: 50px solid green;
+  border: 1px solid green;
   list-style: none;
   border-radius: 1vw;
   padding: 0 0;
   border: none;
   background-color: none;
   box-sizing: border-box;
+  color: ghostwhite;
 }
 
 nav ul li:hover {
@@ -139,7 +139,8 @@ nav ul li a {
   margin: 0;
   opacity: .5;
   font-weight: bold;
-  color: ghostwhite;
+  padding: 0 20px;
+  color: whitesmoke;
 }
 
 a:hover,

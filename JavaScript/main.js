@@ -18,15 +18,20 @@ function writer() {
     setTimeout(writer, 1); /* delay typing */
   }
 }
-setTimeout(() => {
-  writer();
-  loadingElement.style.display = 'none';
-  opacityElement.style.opacity = '1'
-  //  opacityElement2.style.opacity = '1'
-  opacityElement3.style.backgroundImage = 'var(--bg)'
-}, 3000); // delay before start code
-console.log('Hello, how are you!? My name is Irwan Zuwendri Z. Hope you enjoy with my content.\nThank you for visited  my Portfolio.')
 
+
+
+window.addEventListener('load', () => {
+  writer();
+  setTimeout(() => {
+    writer();
+    loadingElement.style.display = 'none';
+    opacityElement.style.opacity = '1'
+    //  opacityElement2.style.opacity = '1'
+    opacityElement3.style.backgroundImage = 'var(--bg)'
+  }, 3000); // delay before start code
+  console.log('Hello, how are you!? My name is Irwan Zuwendri Z. Hope you enjoy with my content.\nThank you for visited  my Portfolio.')
+})
 
 
 
@@ -38,27 +43,36 @@ let j = document.getElementById('ul')
 let I = document.querySelectorAll('[id^="lin"]')
 let n = document.getElementById('popUp')
 let N = document.getElementById('txtX')
+let b = document.querySelector('main')
+
 
 i.style.transform = 'rotate(0deg) translateX(0rem)'
 if (i.style.transform === 'rotate(0deg) translateX(0rem)') {
   i.addEventListener('click', function() {
     i.style.display = 'none'
     j.style.transform = 'translateX(0rem)'
-    if(j.style.transform === 'translateX(0rem)'){
-      l.addEventListener('click', function(){
+    if (j.style.transform === 'translateX(0rem)') {
+      l.addEventListener('click', function() {
         j.style.transform = 'translateX(30rem)'
-        i.style.display ='block'
+        i.style.display = 'block'
       })
     }
   })
 }
 
+
+
+window.addEventListener('scroll', function() {
+  j.style.transform = 'translateX(30rem)'
+  i.style.display = 'block'
+})
+
 I.forEach(I => {
-  I.addEventListener('click', function(){
-   n.style.opacity ='1'
-   N.innerHTML =' content about ' + I.textContent + ' is being developed...'
-   setTimeout(function(){
-     n.style.opacity = '0'
-   },3000)
+  I.addEventListener('click', function() {
+    n.style.opacity = '1'
+    N.innerHTML = I.textContent +  ' Content is being developed...'
+    setTimeout(function() {
+      n.style.opacity = '0'
+    }, 3000)
   })
 })

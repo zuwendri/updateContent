@@ -134,7 +134,7 @@ nav ul li:hover {
 }
 
 nav ul li a {
-  font-size: clamp(10px, 3vw, 20px);
+  font-size: clamp(10px, 3vw, 50px);
   text-decoration: none;
   margin: 0;
   opacity: .5;
@@ -314,4 +314,24 @@ main div div span {
   to {
     transform: rotate(360deg);
   }
+}
+.popUp{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 826263827227272727272272882;
+  border: .5rem solid orange;
+  width: 60%;
+  height: 20%;
+  margin: 50% 20% ;
+  background-color: black;
+  top: 30px;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.popUp #txtX{
+  color: white;
+  font-size: clamp(12px, 4max, 30px)
 }

@@ -35,6 +35,9 @@ console.log('Hello, how are you!? My name is Irwan Zuwendri Z. Hope you enjoy wi
 let i = document.getElementById('hvr')
 let l = document.getElementById('mrp')
 let j = document.getElementById('ul')
+let I = document.querySelectorAll('[id^="lin"]')
+let n = document.getElementById('popUp')
+let N = document.getElementById('txtX')
 
 i.style.transform = 'rotate(0deg) translateX(0rem)'
 if (i.style.transform === 'rotate(0deg) translateX(0rem)') {
@@ -50,63 +53,12 @@ if (i.style.transform === 'rotate(0deg) translateX(0rem)') {
   })
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-i.addEventListener('click', function() {
-  i.style.transform = 'rotate(180deg) translateX(0rem)'
-  setTimeout(function() {
-    i.style.transform = 'rotate(180deg) translateX(3rem)'
-       j.style.transform = 'translateX(0vw)'
-  }, 100), setTimeout(function() {
-    i.style.display = 'none'
-    l.style.display = 'block'
-  }, 150)
+I.forEach(I => {
+  I.addEventListener('click', function(){
+   n.style.opacity ='1'
+   N.innerHTML =' content about ' + I.textContent + ' is being developed...'
+   setTimeout(function(){
+     n.style.opacity = '0'
+   },3000)
+  })
 })
-l.addEventListener('click', function() {
-  if(l.style.display === 'block'){
-     j.style.transform = 'translateX(30vw)'
-     l.style.transform = 'rotate(180deg) translate(-3rem)'
-    setTimeout(function(){
-      l.style.display = 'none'
-      l.style.transform = 'rotate(180deg) translate(-3rem)'
-    },200)
-  }
-     i.style.display = 'block'
-  
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-/*  l.style.transform = 'rotate(180deg) translateX(0rem)'
-  setTimeout(function() {
-    l.style.transform = 'rotate(180deg) translateX(-2rem)'
-        j.style.transform = 'translateX(0vw)'
-  }, 100), setTimeout(function() {
-    l.style.display = 'none'
-    i.style.display = 'block'
-  }, 200), setTimeout(function() {
-    i.style.transform = 'rotate(0deg)'
-    l.style.transform = 'rotate(180deg) translateX(0rem)'
-     j.style.transform = 'translateX(30vw)'
-  }, 200)
-})*/

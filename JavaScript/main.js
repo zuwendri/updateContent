@@ -45,14 +45,22 @@ let n = document.getElementById('popUp')
 let N = document.getElementById('txtX')
 let b = document.querySelector('main')
 
+j.style.opacity = '0'
 
 i.style.transform = 'rotate(0deg) translateX(0rem)'
 if (i.style.transform === 'rotate(0deg) translateX(0rem)') {
   i.addEventListener('click', function() {
     i.style.display = 'none'
+    setInterval(function() {
+      j.style.opacity = '1'
+    }, 22)
     j.style.transform = 'translateX(0rem)'
+
     if (j.style.transform === 'translateX(0rem)') {
       l.addEventListener('click', function() {
+        setTimeout(function() {
+          j.style.opacity = '0'
+        }, 20)
         j.style.transform = 'translateX(30rem)'
         i.style.display = 'block'
       })
@@ -70,7 +78,7 @@ window.addEventListener('scroll', function() {
 I.forEach(I => {
   I.addEventListener('click', function() {
     n.style.opacity = '1'
-    N.innerHTML = I.textContent +  ' Content is being developed...'
+    N.innerHTML = I.textContent + ' Content is being developed...'
     setTimeout(function() {
       n.style.opacity = '0'
     }, 3000)

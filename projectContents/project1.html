@@ -1,0 +1,126 @@
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- bootstrap CSS LINK start -->
+    <link rel="stylesheet" href="../cdn_modules/bootstrap@5.3.0/css/bootstrap.css">
+    <!-- BootStrap END LINK -->
+
+    <link rel="stylesheet" href="../CSS/project1.css">
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+      }
+
+      .ps {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
+
+      .ps>a {
+        color: #000;
+        font-weight: bold;
+      }
+
+      main {
+        margin-top: 100px;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body id='bg'>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid ps bg-danger">
+          <a class="navbar-brand" href="#">Irwan Zuwendri</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="https://zuwendri.github.io/updateContent/">Home</a>
+              <a class="nav-link" href="#">Lorem.</a>
+              <a class="nav-link" href="#">Loremipsum.</a>
+              <a class="nav-link disabled">Lorem</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id='ctn'>
+      <!--ROCK PAPPER SCISSORS PROJECT START-->
+      <div class="card" style="width: 20rem;">
+        <!-- Lottie Animation Script Start -->
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_aGFno30IGO.json" background="transparent" speed=".5" style="width: auto; height: 200px;" loop autoplay></lottie-player>
+        <!-- Lottie Animation Script End -->
+
+
+        <div class="card-body">
+          <h5 class="card-title">Play: Papper, Rock, Scissors</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est aliquam officiis, voluptates et iure accusamus itaque veritatis repellat odio mollitia..</p>
+          <button type="button" class="btn btn-outline-primary" id="btn">PLAY</button>
+        </div>
+      </div>
+      <!--ROCK PAPPER SCISSORS PROJECT END-->
+    </main>
+
+
+    <!-- Rock Papper Scissors Content -->
+    <section id="Game1">
+
+      <h2 class='txBg'>ROCK-PAPPER-SCISSORS</h2>
+
+      <div class='comp-humanWrp'>
+        <div class='compWrp'>
+          <p class="computer">COMPUTER</p>
+          <div class="item1"></div>
+        </div>
+
+        <p class="fght fw-bold fs-1"><span class="text-danger"><sup>V</sup><span class="text-light">/</span></span><span class="text-primary"><sub>S</sub></span></p>
+
+        <div class='humanWrp'>
+          <p class="human">Human</p>
+          <div class="item2"></div>
+        </div>
+      </div>
+    <button type="button" class="btn btn-outline-info" id='btn2'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+</svg> BACK</button>      
+    </section>
+
+    <!-- Rock Papper Scissor Content End -->
+
+
+
+
+
+
+
+
+    <!-- BootStrap Script Start-->
+    <script src="../cdn_modules/bootstrap@5.3.0/js/bootstrap.js"></script>
+    <!-- BootStrap Script End -->
+
+    <!-- Lottie Animation Script Start -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Lottie animation End -->
+
+    <!-- Js Start -->
+    <script src="../JavaScript/project1.js"></script>
+    <!-- Js End -->
+  </body>
+
+  </html>
